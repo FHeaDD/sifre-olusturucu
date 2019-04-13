@@ -1,0 +1,66 @@
+import string
+import random
+
+def sdhrf(size = 8, sdhrf=string.ascii_letters):
+    return ''.join(random.choice(sdhrf) for _ in range(size))
+def sdsy(size = 8, sdsy=string.digits):
+    return ''.join(random.choice(sdsy) for _ in range(size))
+def sdsmb(size = 8, sdsmb=string.punctuation):
+    return ''.join(random.choice(sdsmb) for _ in range(size))
+def hrfsy(size = 8, hrfsy=string.ascii_letters + string.digits):
+    return ''.join(random.choice(hrfsy) for _ in range(size))
+def hrfsmb(size = 8, hrfsmb=string.ascii_letters + string.punctuation):
+    return ''.join(random.choice(hrfsmb) for _ in range(size))
+def hrfsmbsy(size = 8, hrfsmbsy=string.ascii_letters + string.digits + string.punctuation):
+    return ''.join(random.choice(hrfsmbsy) for _ in range(size))
+def sysmb(size = 8, sysmb=string.digits + string.punctuation):
+    return ''.join(random.choice(sysmb) for _ in range(size))
+#-*- coding: utf-8 -*-
+print("""*******************
+Şifre Oluşturucu
+İşlemler;
+
+1.Sadece Harf
+
+2.Sadece Sayı
+
+3. Sadece Sembol
+
+4.Harf + Sayı
+
+5.Harf + Sembol
+
+6.Harf + Sayı + Sembol
+
+7.Sayı + Sembol
+
+Coded By FHeaD
+*******************""")
+
+
+#Kullanıcıdan Yapmak İstediği İşlemin Numarasını Alıyoruz. Numarayı girdikten sonra şifre uzunluğunu soruyor ve ona göre oluşturduğu şifreyi ekrana yansıtıyor..
+islem = input("İşlemi Giriniz:")
+
+if islem == "1":
+    print(sdhrf(int(input('Kaç Karakter Olmasını İstiyorsunuz?'))))
+
+elif islem == "2":
+    print(sdsy(int(input('Kaç Karakter Olmasını İstiyorsunuz?'))))
+
+elif islem == "3":
+    print(sdsmb(int(input('Kaç Karakter Olmasını İstiyorsunuz?'))))
+
+elif islem == "4":
+    print(hrfsy(int(input('Kaç Karakter Olmasını İstiyorsunuz?'))))
+
+elif islem == "5":
+    print(hrfsmb(int(input('Kaç Karakter Olmasını İstiyorsunuz?'))))
+
+elif islem == "6":
+    print(hrfsmbsy(int(input('Kaç Karakter Olmasını İstiyorsunuz?'))))
+
+elif islem == "7":
+    print(sysmb(int(input('Kaç Karakter Olmasını İstiyorsunuz?'))))
+
+else:
+    print("Geçersiz İşlem..")
